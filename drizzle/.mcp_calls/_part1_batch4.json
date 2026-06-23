@@ -1,0 +1,1 @@
+{"project_id":"jpkcupyugbbzwdykwsxh","query":"INSERT INTO _seed_ids (fixture_id, entity_type, db_id)\nSELECT 'b-pizzaria-forno', 'business', bs.id\nFROM businesses bs\nJOIN _seed_ids tt ON tt.db_id = bs.tenant_id AND tt.fixture_id = 't-salinas' AND tt.entity_type = 'tenant'\nWHERE bs.slug = 'pizzaria-forno-de-pedra';\n\nCOMMIT;\n\n"}
