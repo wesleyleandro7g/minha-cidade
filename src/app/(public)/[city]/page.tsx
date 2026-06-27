@@ -64,9 +64,9 @@ export default async function CityHomePage({ params }: Params) {
               className="object-cover brightness-[0.4] saturate-[1.15]"
             />
           )}
-          {/* Layered gradients for a smoother fade and higher contrast */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/25 to-background" />
-          <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-background to-transparent" />
+          {/* Layered gradients — tighter bottom fade in light mode so hero text stays readable */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/45 dark:via-black/25 dark:to-background" />
+          <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-background via-background/60 to-transparent sm:h-12 dark:h-36 dark:from-background dark:via-transparent" />
         </div>
         <div className="container relative z-10 flex flex-col items-center py-20 text-center text-white sm:py-28">
           <div className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md border border-white/10 shadow-sm">
