@@ -1,14 +1,15 @@
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { DM_Sans, Syne } from "next/font/google";
 
-export const inter = Inter({
+export const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
-export const jakarta = Plus_Jakarta_Sans({
+export const syne = Syne({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-jakarta",
+  weight: ["600", "700", "800"],
+  variable: "--font-syne",
   display: "swap",
 });

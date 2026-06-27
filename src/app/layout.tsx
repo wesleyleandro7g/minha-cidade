@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@/styles/globals.css";
-import { inter, jakarta } from "@/lib/fonts";
+import { dmSans, syne } from "@/lib/fonts";
 import { Providers } from "@/components/providers";
 import { env } from "@/lib/env";
 import { cn } from "@/lib/utils";
@@ -38,7 +38,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={cn(inter.variable, jakarta.variable, "font-sans")}>
+      <body className={cn(dmSans.variable, syne.variable, "font-sans")}>
         <Providers>{children}</Providers>
       </body>
     </html>
