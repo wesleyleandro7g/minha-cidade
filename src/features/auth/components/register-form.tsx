@@ -78,7 +78,7 @@ export function RegisterForm() {
         </p>
       )}
 
-      <Button type="submit" className="w-full" disabled={pending}>
+      <Button type="submit" className="w-full shadow-md shadow-primary/20 hover:shadow-float font-bold" disabled={pending}>
         {pending && <Loader2 className="h-4 w-4 animate-spin" />}
         Criar conta
       </Button>
@@ -111,22 +111,22 @@ function TypeOption({
       type="button"
       onClick={onClick}
       className={cn(
-        "flex flex-col items-start gap-1 rounded-xl border-2 p-3 text-left transition-colors",
+        "flex flex-col items-start gap-1 rounded-2xl border-2 p-3 text-left transition-all duration-300 w-full outline-none",
         active
-          ? "border-primary bg-primary-soft"
-          : "border-border hover:bg-muted",
+          ? "border-primary bg-primary-soft shadow-sm shadow-primary/10 ring-1 ring-primary/20"
+          : "border-border bg-card/50 hover:bg-muted/70 hover:border-border-muted",
       )}
     >
       <span
         className={cn(
-          "flex h-9 w-9 items-center justify-center rounded-lg",
-          active ? "bg-primary text-primary-foreground" : "bg-muted",
+          "flex h-9 w-9 items-center justify-center rounded-xl transition-all duration-300",
+          active ? "bg-primary text-primary-foreground shadow-sm shadow-primary/20 scale-105" : "bg-muted text-muted-foreground",
         )}
       >
         {icon}
       </span>
-      <span className="text-sm font-semibold">{label}</span>
-      <span className="text-xs text-muted-foreground">{description}</span>
+      <span className="text-sm font-bold mt-1 text-foreground">{label}</span>
+      <span className="text-[11px] text-muted-foreground font-medium">{description}</span>
     </button>
   );
 }

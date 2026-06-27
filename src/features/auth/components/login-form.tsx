@@ -47,7 +47,7 @@ export function LoginForm({ next = "/" }: { next?: string }) {
         </p>
       )}
 
-      <Button type="submit" className="w-full" disabled={pending}>
+      <Button type="submit" className="w-full shadow-md shadow-primary/20 hover:shadow-float font-bold" disabled={pending}>
         {pending && <Loader2 className="h-4 w-4 animate-spin" />}
         Entrar
       </Button>
