@@ -22,7 +22,7 @@ const fadeUp = {
 
 export function CityHomeHero({ tenant }: { tenant: Tenant }) {
   return (
-    <section className="relative overflow-hidden hero-cut">
+    <section className="relative overflow-hidden bg-slate-950 rounded-b-[2.5rem] md:rounded-b-[4rem] shadow-soft">
       <div className="absolute inset-0 bg-muted">
         {tenant.bannerUrl ? (
           <Image
@@ -31,13 +31,14 @@ export function CityHomeHero({ tenant }: { tenant: Tenant }) {
             fill
             priority
             sizes="100vw"
-            className="object-cover scale-105 brightness-[0.35] saturate-[1.2]"
+            className="object-cover scale-105 brightness-[0.3] saturate-[1.15]"
           />
         ) : (
           <div className="absolute inset-0 gradient-brand-radial" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_0%,hsl(25_100%_50%/0.25),transparent)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/75" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_40%_at_50%_0%,hsl(25_100%_50%/0.22),transparent)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
         <div className="grain-overlay absolute inset-0" />
       </div>
 
